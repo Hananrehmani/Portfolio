@@ -139,7 +139,49 @@ body {
   border-radius: 20px;
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; padding: 10px 12px 10px 16px;
+  /* 98% water-clear at the top — almost fully transparent glass */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+  border-color: rgba(255, 255, 255, 0.22);
+  transition: background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
+.nav-logo, .nav-links { position: relative; z-index: 2; }
+
+/* Water flowing over the glass — appears on scroll */
+.nav-water {
+  position: absolute; inset: 0; z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(240px 60px at 20% 120%, rgba(127, 231, 255, 0.35), transparent 70%),
+    radial-gradient(200px 50px at 75% -20%, rgba(255, 255, 255, 0.4), transparent 70%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.14) 0 10px, transparent 10px 26px);
+  background-size: 200% 100%, 200% 100%, 220px 100%;
+  -webkit-backdrop-filter: blur(4px) saturate(170%);
+  backdrop-filter: blur(4px) saturate(170%);
+  filter: url(#water-flow);
+  transition: opacity 0.6s ease;
+  animation: water-drift 7s linear infinite;
+  animation-play-state: paused;
+}
+@keyframes water-drift {
+  from { background-position: 0% 0, 0% 0, 0 0; }
+  to { background-position: -60% 0, 60% 0, 220px 0; }
+}
+.nav.scrolled {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.42);
+  box-shadow:
+    0 12px 40px rgba(1, 28, 48, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 0 rgba(127, 231, 255, 0.35),
+    inset 0 0 28px rgba(127, 231, 255, 0.08);
+}
+.nav.scrolled .nav-water { opacity: 1; animation-play-state: running; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: 0.01em; }
 .nav-logo-mark {
   width: 36px; height: 36px; border-radius: 12px;

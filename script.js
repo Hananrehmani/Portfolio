@@ -87,6 +87,16 @@
     revealEls.forEach(function (el) { el.classList.add("visible"); });
   }
 
+  // Nav water effect — 98% clear at the top, water flows over the glass on scroll
+  var navEl = document.querySelector(".nav");
+  function onScrollNav() {
+    if (!navEl) return;
+    if (window.scrollY > 24) navEl.classList.add("scrolled");
+    else navEl.classList.remove("scrolled");
+  }
+  window.addEventListener("scroll", onScrollNav, { passive: true });
+  onScrollNav();
+
   // Card tilt + cursor shine (pointer devices only)
   var finePointer = window.matchMedia("(pointer: fine)").matches;
   if (finePointer) {
