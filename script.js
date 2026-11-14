@@ -1,10 +1,10 @@
-// Abdul Hannan — Liquid Glass Portfolio
-// Live Faisalabad clock, copy roll number, scroll reveal, card tilt + shine, bubbles.
+// Your Name — Liquid Glass Portfolio
+// Live Your City clock, copy roll number, scroll reveal, card tilt + shine, bubbles.
 
 (function () {
   "use strict";
 
-  // Live clock — Asia/Karachi (Faisalabad)
+  // Live clock — Asia/Karachi (Your City)
   var clockEl = document.getElementById("liveClock");
   var dateEl = document.getElementById("liveDate");
 

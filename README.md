@@ -1,7 +1,7 @@
-# Portfolio — Abdul Hannan
+# Portfolio — Your Name
 
-A single-page personal portfolio for **Abdul Hannan**, BS Artificial Intelligence
-student at Riphah International University, Faisalabad.
+A single-page personal portfolio for **Your Name**, Your Degree
+student at Your University.
 
 Design: **"water clear" Liquid Glass** (iOS 26 style) — crystal-clear translucent
 glass panels over a deep aqua animated sea, with drifting light blobs, rising
@@ -13,13 +13,13 @@ images or fonts — pure CSS gradients and inline SVG, so the site works anywher
 - `index.html` — the whole page: hero, about, Semester 1 subjects, lab work,
   projects, skills, education, goals road to 2030, and contact.
 - `styles.css` — all Liquid Glass styling, animations, and responsive layout.
-- `script.js` — live Faisalabad clock (Asia/Karachi), copy roll-number button,
+- `script.js` — live Your City clock (Asia/Karachi), copy roll-number button,
   scroll reveal, card tilt/shine, and the rising bubbles.
 
 ## Highlights
 
-- Live Faisalabad clock, updating every second
-- Roll No. **F1F26BSAI0153** with a one-tap copy button
+- Live Your City clock, updating every second
+- Roll No. **YOUR-ROLL-NO** with a one-tap copy button
 - All 7 Semester 1 subjects with teacher names
 - Lab work with real code snippets (C++ control structures, truth tables, physics)
 - Goals timeline from 2026 to 2030
@@ -37,4 +37,4 @@ Open `index.html` directly in any browser — no build step, no server needed.
    folder `/ (root)`, then **Save**.
 4. Your site will be live at `https://<username>.github.io/<repo>/`.
 
-© Abdul Hannan — Faisalabad, Pakistan
+© Your Name — Your City, Country
